@@ -1,0 +1,13 @@
+   private class GraphNode {
+        private int data;
+        private ArrayDeque<Integer>[] list;
+        private int V;
+
+        GraphNode(int v) {
+            V = v;
+            list = new ArrayDeque[v];//cannot do    list = new ArrayDeque<>()[v];//gives error
+            for (int i = 0; i < v; ++i)
+                adj[i] = new LinkedList();
+        }
+
+    }

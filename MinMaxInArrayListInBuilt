@@ -1,0 +1,35 @@
+For Array:
+
+Sort List:
+
+Collections.sort(testList);
+Collections.reverse(testList);
+
+int[] tab = {12, 1, 21, 8};
+        int min = Arrays.stream(tab).min().getAsInt();
+        int max = Arrays.stream(tab).max().getAsInt();
+        System.out.println("Min = " + min);
+        System.out.println("Max = " + max);
+
+
+//Time-efficient
+int[] tab = {12, 1, 21, 8};
+IntSummaryStatistics stat = Arrays.stream(tab).summaryStatistics();
+        int min = stat.getMin();
+        int max = stat.getMax();
+        System.out.println("Min = " + min);
+        System.out.println("Max = " + max);
+
+
+For List(does not work if Array is converted to a List using Arrays.asList()):
+
+
+        List<Integer> list=new ArrayList<>();
+        list.add(1);
+        list.add(231);
+        list.add(123);
+        list.add(321);
+        list.add(1323);
+        list.add(132524);
+        System.out.println(Collections.min(b));
+        System.out.println(Collections.max(b));
